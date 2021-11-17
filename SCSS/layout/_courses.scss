@@ -1,0 +1,318 @@
+.courses{
+    width: 95%;
+    margin: auto;
+    margin-top: 4*$spacing;
+
+    .courses__content{
+        h1{
+            @include Text($text-lg, $text-bolder, none);
+        }
+        p{
+            font-weight: $text-normal;
+        }
+
+        .selection{
+            //   Menu 
+            .menu  {
+                
+                // Nav-tabs 
+                .nav-tabs{
+                    .nav-item{
+                    padding: 0 $spacing;
+                    margin-top: $spacing;
+                    .nav-link{
+                        @include Text(none, $text-bolder, $gray-400Tx);
+                        background-color: transparent ;
+                        border-color: transparent;
+                        padding-bottom: $spacing;
+                        padding: 0 0.5*$spacing;
+                    }
+                    .active{
+                        color: $gray-600Tx;
+                        border-bottom: 2.5px solid $gray-600Bd;
+                    }
+                    .nav-link-1{
+                    }
+                    }
+                }  
+                //End Nav-tabs  
+
+                //Selection content
+                a.selection__content{
+                    text-decoration: none;
+
+                    .tab-content{
+                        background: $pinkBg;
+                        margin-top: 1.5*$spacing;
+                        padding: 2*$spacing;                   
+                        
+                        .content{
+                            @include Flex(flex, none, center);
+                            .content-L{
+                                width: 50%;
+                                h1{
+                                    font-size: $text-md;
+                                }
+                                p{
+                                    font-size: $text-sm;
+                                }
+                                span{
+                                    @include Text($text-sm, $text-bolder, $blue-300Tx);
+                                }
+                            }
+        
+                            .content-R{
+                                width: 50%;
+                                .img-r{
+                                    text-align: right;
+
+                                    img{
+                                        width: 12*$spacing;
+                                        height: 12*$spacing;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //End Selection content
+
+                //Courses__list
+                .courses__list{
+                    margin-top: 1.5*$spacing;
+                    .carousel-inner{
+                        .carousel-item{
+                            .item{
+                                width: 100%;
+                                display: flex;
+                                position: relative;
+                                .list__card{
+                                    width: 20%;
+                                    padding: 0 0.5*$spacing;
+                                    border: none;
+                                    
+                                    a{
+                                        text-decoration: none;
+            
+                                        img{
+                                            @include Button(1px solid $gray-200Bd, $rounded, none, none, none);
+                                            width: 100%;
+                                            margin-bottom: $spacing;
+                                        }
+                                        .card-body{
+                                        padding: 0;
+                        
+                                        h2{
+                                            @include Text($text-md, $text-bolder, none);
+                                            margin-bottom: 0;
+                                        }p{
+                                            @include Text($text-2xs, none, $gray-400Tx);
+                                            margin: $spacing 0;
+                                            margin: 0.3*$spacing 0;
+                                        }
+                                        .icon-star{
+                                            font-size: $text-2xs;
+                                            span{
+                                                @include Text($text-md, $text-bolder, $yellowTx-600Tx);
+                                                margin-right: 0.3*$spacing;
+                                            }
+                                            i{
+                                                @include Text($text-xs, none, $yellowTx-500Tx);
+                                            }
+                                            p{
+                                                color: $gray-400Tx;
+                                            }
+                                        }
+                                        span.price{
+                                            font-weight: $text-bolder;
+                                            margin: 0.3*$spacing 0;
+                                        }
+                                        span.bestseller{
+                                            @include Text($text-2xs, $text-bolder, $yellowTx-700Tx);
+                                            @include Button(none, $rounded, none, $yellowBg, $yellowTx-700Tx);
+                                            padding: 0.3*$spacing 0.5*$spacing;
+                                        }
+                                        
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    .carousel-control-prev{
+                        opacity: 1;
+                        .carousel-control-prev-icon{
+                            @include Prev-Next(absolute, 2.5*$spacing, -$spacing, none, $primaryBg, 3.5*$spacing, 3.5*$spacing, 50%, $text-xl, 0px 0px 5px 1px rgba(14, 14, 14, 0.3));
+
+                            i{
+                                @include icon-Prev-Next(absolute, -0.25*$spacing, 1.125*$spacing, none, $secondaryTx, 2);
+                                
+                                &:hover{
+                                    color: $blue-600Tx;
+                                }
+                            }
+                        }  
+                    }
+                    .carousel-control-next{
+                        opacity: 1;
+                        .carousel-control-next-icon{
+                            @include Prev-Next(absolute, 2.5*$spacing, none, -$spacing, $primaryBg, 3.5*$spacing, 3.5*$spacing, 50%, $text-xl, 0px 0px 5px 1px rgba(14, 14, 14, 0.3));
+
+                            i{
+                                @include icon-Prev-Next(absolute, -0.25*$spacing, none, 1.125*$spacing, $secondaryTx, 2);
+                                
+                                &:hover{
+                                    color: $blue-600Tx;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //End Menu
+
+            //Students
+            .students{
+                margin-top: 3*$spacing;
+                h1{
+                    margin-bottom: 0;
+                }
+
+                .students__list{
+                    margin-top: $spacing;
+            
+                    .carousel-inner{
+                        .carousel-item{
+                            .item{
+                                width: 100%;
+                                display: flex;
+                                position: relative;
+                                .list__card{
+                                    width: 20%;
+                                    padding: 0 0.5*$spacing;
+                                    border: none;
+                                    
+                                    a{
+                                        text-decoration: none;
+            
+                                        img{
+                                            @include Button(1px solid $gray-200Bd, $rounded, none, none, none);
+                                            width: 100%;
+                                            margin-bottom: $spacing;
+                                        }
+                                        .card-body{
+                                        padding: 0;
+                        
+                                        h2{
+                                            @include Text($text-md, $text-bolder, none);
+                                            margin-bottom: 0;
+                                        }p{
+                                            @include Text($text-2xs, none, $gray-400Tx);
+                                            margin: $spacing 0;
+                                            margin: 0.3*$spacing 0;
+                                        }
+                                        .icon-star{
+                                            font-size: $text-2xs;
+                                            span{
+                                                @include Text($text-md, $text-bolder, $yellowTx-600Tx);
+                                                margin-right: 0.3*$spacing;
+                                            }
+                                            i{
+                                                @include Text($text-xs, none, $yellowTx-500Tx);
+                                            }
+                                            p{
+                                                color: $gray-400Tx;
+                                            }
+                                        }
+                                        span.price{
+                                            font-weight: $text-bolder;
+                                            margin: 0.3*$spacing 0;
+                                        }
+                                        span.bestseller{
+                                            @include Text($text-2xs, $text-bolder, $yellowTx-700Tx);
+                                            @include Button(none, $rounded, none, $yellowBg, $yellowTx-700Tx);
+                                            padding: 0.3*$spacing 0.5*$spacing;
+                                        }
+                                        
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    .carousel-control-prev{
+                        opacity: 1;
+                        .carousel-control-prev-icon{
+                            @include Prev-Next(absolute, 2.5*$spacing, -$spacing, none, $primaryBg, 3.5*$spacing, 3.5*$spacing, 50%, $text-xl, 0px 0px 5px 1px rgba(14, 14, 14, 0.3));
+
+                            i{
+                                @include icon-Prev-Next(absolute, -0.25*$spacing, 1.125*$spacing, none, $secondaryTx, 2);
+                                
+                                &:hover{
+                                    color: $blue-600Tx;
+                                }
+                            }
+                        }  
+                    }
+                    .carousel-control-next{
+                        opacity: 1;
+                        .carousel-control-next-icon{
+                            @include Prev-Next(absolute, 2.5*$spacing, none, -$spacing, $primaryBg, 3.5*$spacing, 3.5*$spacing, 50%, $text-xl, 0px 0px 5px 1px rgba(14, 14, 14, 0.3));
+                            
+                            i{
+                                @include icon-Prev-Next(absolute, -0.25*$spacing, none, 1.125*$spacing, $secondaryTx, 2);
+                                
+                                &:hover{
+                                    color: $blue-600Tx;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //End Students
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+
+};
+@media screen and (max-width: 768px){
+    .list__card{
+        width: calc(100%/3)!important;
+    }
+    .card4, .card5, .card9, .card10 {
+        display: none;
+    }
+    .carousel{
+        height: 17*$spacing!important;
+    }
+};
+@media screen and (max-width: 576px){
+    .list__card{
+        width: 50%!important;
+    }
+    .card3, .card4, .card5, .card8, .card9, .card10 {
+        display: none;
+    }
+};   
+@media screen and (max-width: 440px){
+    .courses{
+        margin-top: 3*$spacing;
+        .courses__content .selection .menu a.selection__content .tab-content .content{
+            .content-L{
+                width: 100%;
+            }
+            .content-R{
+                display: none;
+            }
+        }
+    }  
+};

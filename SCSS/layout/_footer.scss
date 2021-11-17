@@ -1,0 +1,98 @@
+.footer{
+    width: 95%;
+    margin: auto;
+    padding: 2*$spacing 0;
+    .footer__link{
+        .link-list{
+            .link-item{
+                font-size: $text-sm;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: $secondaryTx;
+                    padding: 0.3*$spacing 0;
+                    &:hover{
+                        color: $blue-600Tx;
+                    }
+                }
+            }
+        }
+        .link-locale{
+            .form-group{
+                @include Flex(flex, flex-end, none);
+                .form-group-select{
+                    @include Flex(flex, center, center);
+                    @include Button(1px solid $gray-200Bd, $rounded, none, none, none);
+                    width: 12*$spacing;
+                    text-align: right; 
+                    padding: 0.2*$spacing 0.5*$spacing;
+                    margin: 0;
+                    
+    
+                    .language{
+                        @include Button(none, none, none, none, none);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__logo{
+        margin-top: 3*$spacing;
+        a{
+            img{
+                height: 2*$spacing;
+            }
+        }
+       
+        p{
+            @include Text($text-2xs, $text-normal, none);
+            text-align: right;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+
+};
+@media screen and (max-width: 768px){
+    .link-locale-left{
+        display: block!important;
+        .form-group{
+            @include Button(1px solid $gray-200Bd, $rounded, none, none, none);
+            display: inline-block;
+            padding-left: $spacing;
+
+            .form-group-select{
+                @include Flex(flex, none, center);
+                .language{
+                    border: none;
+                }
+            }
+        }
+    }
+    .link-locale-right{
+        display: none;
+    }
+    .footer__logo{
+        margin: 0!important;
+        .logo{
+            margin: $spacing 0;
+            padding: 0!important;
+
+        }
+        .copyright{
+            padding: 0!important;
+            p{
+                text-align: left;
+            }
+        }
+    }
+    
+};
+@media screen and (max-width: 576px){
+    
+};   

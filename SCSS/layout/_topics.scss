@@ -1,0 +1,54 @@
+.topics{
+    margin: 0 auto;
+    width: 95%;
+    margin-top: 4*$spacing;
+    h1{
+        @include Text($text-lg, $text-bolder, none);
+        margin-bottom: 3*$spacing;
+    }
+
+    .topics__list{
+        @include Flex(flex, space-between, none);
+        .topics__item{
+            width: 25%;
+            
+             h2{
+                @include Text($text-md, $text-bolder, none);
+                height: 3*$spacing;
+                }
+            a{
+                @include Text(none, $text-bolder, $secondaryTx);
+                text-decoration: none;
+            }
+
+            p{
+                font-size: $text-sm;
+                margin-top: 0.3*$spacing;
+                margin-bottom: 2.5*$spacing;
+            }
+        }
+    }
+
+    button{
+        @include Button(none, $rounded, none, $secondaryBg, $primaryTx);
+        @include Text(none, $text-bolder, $primaryTx);
+        padding: 0.7*$spacing $spacing;
+
+        &:hover{
+            background: $blue-600Bg;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+
+};
+@media screen and (max-width: 768px){
+    
+};
+@media screen and (max-width: 576px){
+   
+};   

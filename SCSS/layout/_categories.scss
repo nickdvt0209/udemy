@@ -1,0 +1,72 @@
+.categories{
+    margin-top: 3*$spacing;
+    h1{
+        font-size: $text-lg;
+    font-weight: $text-bolder;
+    padding-left: 2*$spacing;
+    margin-bottom: 0;
+    }
+
+    .list-item{
+        padding: 0 1.5*$spacing;
+        .item{
+            margin-top: $spacing;
+            padding: 0 0.5*$spacing;
+            a{
+                text-decoration: none;
+            }
+            .content--item{
+                border: 1px solid $gray-200Bd;
+                border-radius: $rounded;
+                img{
+                    width: 100%;
+                }
+                .text{
+                    margin: $spacing;
+                    height: 3*$spacing;
+                    h2{
+                        font-size: $text-2md;
+                        font-weight: $text-bolder;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .categories__min{
+        display: none;
+        width: 95%;
+        margin: auto;
+        a{
+            @include Text($text-2md, $text-bolder, $secondaryTx);
+            @include Button(1px solid $secondaryTx, $rounded-md, none, none, $secondaryTx);
+            display: inline-block;
+            margin: 0.5*$spacing;
+            padding: 0.7*$spacing $spacing;
+            text-decoration: none;
+            &:hover{
+                color: $blue-600Tx;
+                border-color: $blue-600Tx;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+
+};
+@media screen and (max-width: 768px){
+    
+};
+@media screen and (max-width: 576px){
+    .categories__content{
+        display: none;
+    }
+    .categories__min{
+        display: block!important;
+    }
+};   

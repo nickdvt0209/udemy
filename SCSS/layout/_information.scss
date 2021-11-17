@@ -1,0 +1,187 @@
+.information{
+    margin-top: 3*$spacing;
+    // Instructor 
+    .instructor{
+        align-items: center;
+        padding: 2.5*$spacing 0;
+        position: relative;
+
+        
+        .instructor__right{
+            background: $lightBg;
+            height: 20*$spacing;
+            .instructor__space{
+                width: 50%;
+            }
+            .instructor__content{
+                @include Flex(flex, center, center);
+                width: 50%;
+                padding: 2*$spacing;
+                .content--center{
+                    h1{
+                        @include Text($text-xl, $text-bolder, none);
+                    }
+                    p{
+                        @include Text($text-2md, $text-normal, none);
+                        word-spacing: 0.2*$spacing;
+                    }
+                    button{
+                        @include Button(none, $rounded, none, $secondaryBg, $primaryTx);
+                        padding: 0.8*$spacing $spacing;
+                        font-weight: $text-bolder;
+                        &:hover{
+                            background: $blue-600Bg;
+                        }
+                    }
+                }
+            } 
+        }
+
+        .instructor__left{
+            text-align: right;
+            padding-right: 4*$spacing;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            img{
+                box-shadow: 0px 0px 5px 1px rgba(14, 14, 14, 0.3);
+            }
+        }
+    }
+    // End Instructor 
+
+    // Companies
+    .companies{
+        margin-top: 3*$spacing;
+        padding: 2.5*$spacing 0;
+        text-align: center;
+        border-top: 1px solid $gray-200Bd;
+        border-bottom: 1px solid $gray-200Bd;
+
+        h1{
+            @include Text($text-lg, $text-bolder, none);
+            margin-bottom: 2*$spacing;
+        }
+        .companies__logo{
+            a{
+                text-decoration: none;
+                img{
+                height: 1.8*$spacing;
+                margin: $spacing 1.2*$spacing;
+                }
+            }
+        }
+    }
+    // End Companies 
+
+    // Business 
+    .business{
+        margin-top: 3*$spacing;
+        align-items: center;
+        padding: 2.5*$spacing 0;
+        position: relative;
+        
+        .business__left{
+            background: $blue-700Bg;
+            height: 20*$spacing;
+            .business__content{
+                @include Flex(flex, center, center);
+                width: 50%;
+                padding: 2*$spacing;
+                .content--center{
+                    width: 20*$spacing;
+                    h1{
+                        @include Text($text-xl, $text-bolder, $primaryTx);
+                    }
+                    p{
+                        @include Text($text-2md, $text-normal, $primaryTx);
+                        word-spacing: 0.2*$spacing;
+                    }
+                    button{
+                        @include Button(none, $rounded, none, $secondaryBg, $primaryTx);
+                        padding: 0.8*$spacing $spacing;
+                        font-weight: $text-bolder;
+                        &:hover{
+                            background: $blue-600Bg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .business__right{
+            // display: none;
+            padding-left: 4*$spacing;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            img{
+                box-shadow: 0px 0px 5px 1px rgba(14, 14, 14, 0.3);
+            }
+        }
+    }
+    // End Business 
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+    .instructor__right, .instructor__left{
+        display: none!important;
+    }
+    .instructor{
+        @include Flex(flex, center, none);
+        background: $lightBg;
+        .instructor__screen-md{
+            width: 40*$spacing;
+            padding: 0 2*$spacing;
+            text-align: center;
+            h1{
+                @include Text($text-xl, $text-bolder, none);
+            }
+            p{
+                @include Text($text-2md, $text-normal, none);
+                word-spacing: 0.2*$spacing;
+            }
+            button{
+                @include Button(none, $rounded, none, $secondaryBg, $primaryTx);
+                padding: 0.8*$spacing $spacing;
+                font-weight: $text-bolder;
+                &:hover{
+                    background: $blue-600Bg;
+                }
+            }
+        }
+    }
+
+    .business__left{
+        text-align: center;
+        .business__content{
+            width: 100%!important;
+            padding: 2*$spacing!important;
+            .content--center{
+            width: 100%!important;
+            }
+        }
+    }
+    .business__right{
+        display: none!important;
+    }
+     
+};
+@media screen and (max-width: 768px){
+    
+};
+@media screen and (max-width: 576px){
+    .instructor__screen-md{
+        button{
+            width: 100%;
+        }
+    }
+    .content--center{
+        button{
+            width: 100%;
+        }
+    }
+};   

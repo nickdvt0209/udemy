@@ -1,0 +1,39 @@
+.banner{
+    @include BgImg(url(../../img/purple-intersect.svg), none, repeat-x, none);
+    margin-top: 3*$spacing;
+
+    .banner__content{
+        background-color: rgba(130, 10, 90, 0.9);
+
+        .content{
+            h1{
+                @include Text($text-xl, $text-bolder, $primaryTx);
+                padding-top: 3.5*$spacing;
+            }
+            span{
+                @include Text($text-2md, $text-lighter, $primaryTx);
+                margin-bottom: $spacing;
+                word-spacing: 0.2*$spacing;
+            }
+            .btn{
+                @include Button(1px solid $whiteBd, none, none, transparent, $primaryTx);
+                @include Text(none, $text-bolder, $primaryTx);
+                padding: 0.7*$spacing 0.5*$spacing;
+                margin-bottom: 3.5*$spacing;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+
+};
+@media screen and (max-width: 768px){
+    
+};
+@media screen and (max-width: 576px){
+    
+};   

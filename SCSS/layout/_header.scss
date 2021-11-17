@@ -1,0 +1,124 @@
+.header{
+    @include Flex(flex, space-between, center);
+    height: 5*$spacing;
+    padding: 0 $spacing;
+
+    .btn-bars, .icon-search-cart {
+        display: none;
+    }
+
+    .logo{
+        img{
+            width: 7*$spacing;
+        }
+    }
+
+    .nav{
+        a{
+            @include Text($text-md, $text-lighter, $gray-500Tx);
+            text-decoration: none;
+            margin: 0 $spacing;
+            &:hover{
+                color: $secondaryTx;
+            }
+        }
+    }
+
+    .search{
+        @include Button(1px solid $gray-300Bd, 30*$spacing, none, $lightBg, none);
+        padding: 0.5*$spacing;
+        flex-grow:1;
+        display: flex;
+
+        i{
+            margin-top: 0.25*$spacing;
+            color: $gray-300Tx;
+        }
+        
+        input {
+            @include Button(none, none, none, transparent, none);
+            width: 80%;
+            margin-left: 0.5*$spacing;
+        }
+        
+    }
+
+    .cart{
+        margin: $spacing;
+        font-size: $text-2md;
+        
+        i{
+            color: $gray-400Tx;
+
+            &:hover{
+                color: $secondaryTx;
+            }
+        }
+    }
+        
+
+    .btns{
+        .btn-login{
+            @include Button(1px solid $secondaryBd, $rounded, none, transparent, $secondaryTx);
+            @include Text($text-md, $text-regular, none);
+            padding: 0.5*$spacing 1.5*$spacing;
+            &:hover{
+                border-color: $blue-600Bd;
+                color: $blue-600Tx;
+            }
+        }
+        .btn-signup{
+            @include Button(1px solid $secondaryBd, $rounded, none, $secondaryBg, $primaryTx);
+            @include Text($text-md, $text-regular, $primaryTx);
+            padding: 0.5*$spacing 1.5*$spacing;
+            margin-left: 0.5*$spacing;
+            
+            &:hover{
+                background: $blue-600Bg;
+                border-color: $blue-600Bd;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 1100px){
+    .nav-2{
+        .text-1{
+            display: none!important ;
+        }
+    }
+};
+@media screen and (max-width: 992px){
+    .nav-2{
+        display: none!important ;
+    }
+};
+@media screen and (max-width: 768px){
+    .nav-1, .nav-2, .search, .cart, .btns {
+        display: none!important ;
+    }
+    
+    .btn-bars, .icon-search-cart {
+        display: block!important;
+        color: $gray-400Tx;
+        a{
+            @include Text($text-2md, none, $gray-400Tx);
+            text-decoration: none;
+            margin: 0 $spacing;
+        }
+
+        @include Button(none, none, none, transparent, $gray-400Tx);
+        font-size: $text-xl;
+    }
+    .logo{
+        margin-left: 2*$spacing;
+    }
+
+};
+@media screen and (max-width: 576px){
+    
+};   

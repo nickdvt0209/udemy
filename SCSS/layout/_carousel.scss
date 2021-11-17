@@ -1,0 +1,78 @@
+.carousel {
+    margin: 0 0.2*$spacing;
+    position: relative;
+    .carousel__image{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .carousel__content{
+        background-color:$primaryBg;
+        width: 25*$spacing;
+        position: absolute;
+        top: 3*$spacing;
+        left: 3*$spacing;
+        padding: 2*$spacing 1.5*$spacing 1.5*$spacing 1.5*$spacing;
+        color: $gray-600Tx;
+
+        h1{
+            font-weight: $text-bolder;
+        }
+        p{
+            font-size: $text-md;
+            word-spacing: 0.2*$spacing;
+        }
+        .carousel__content--search{
+            @include Button(1px solid $gray-600Bd, $rounded, none, none, none);
+            margin-bottom: 1.5*$spacing;
+            input{
+                @include Button(none, $rounded, none, none, none);
+                padding: 0.8*$spacing 0 0.8*$spacing $spacing;
+                width: 100%;
+            }
+            a>i{
+                color: $gray-600Tx;
+                padding: $spacing;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+};
+@media screen and (max-width: 992px){
+
+};
+@media screen and (max-width: 768px){
+    .carousel{
+        height: 13*$spacing!important;
+
+        .carousel__content{
+            width: 20*$spacing!important;
+            padding: $spacing!important;
+        
+        h1{
+            font-size: $text-xl;
+        }
+        .carousel__content--search{
+            margin-bottom: 0!important;
+        }
+    }
+    }
+    
+};
+@media screen and (max-width: 576px){
+    
+};   
+@media screen and (max-width: 440px){
+    .carousel{
+        height: 21*$spacing!important;
+        .carousel__content{
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    } 
+};

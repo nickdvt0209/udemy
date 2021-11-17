@@ -1,0 +1,100 @@
+//COLOR TEXT
+$primaryTx: #ffffff;
+$secondaryTx: #0f7c90;
+$gray-600Tx: #3c3b37;
+$gray-500Tx: #656561;
+$gray-400Tx: #73726c;
+$gray-300Tx: #989586;
+$blue-600Tx: #094c59;
+$blue-300Tx: #3c7c90;
+$yellowTx-700Tx: #593d00;
+$yellowTx-600Tx: #be5a0e;
+$yellowTx-500Tx: #eb8a2f;
+
+//COLOR BACKGROUND
+$primaryBg: #ffffff;
+$secondaryBg: #0f7c90;
+$lightBg: #fbfbf8;
+$pinkBg: #fdf7f0;
+$yellowBg: #ffe799;
+$blue-700Bg: #003640;
+$blue-600Bg: #094c59;
+
+//COLOR BORDER
+$whiteBd: #ffffff;
+$gray-600Bd: #3c3b37;
+$gray-300Bd: #989586;
+$gray-200Bd: #dee2e6;
+$secondaryBd: #0f7c90;
+$blue-600Bd: #094c59;
+
+//FONT-SIZE
+$text-xs: 0.7rem;
+$text-2xs: 0.8rem;
+$text-sm: 0.9rem;
+$text-md: 1rem;
+$text-2md: 1.2rem;
+$text-lg: 1.5rem;
+$text-xl: 2rem;
+
+//FONT-WEIGHT
+$text-normal: 300;
+$text-lighter: 400;
+$text-regular: 500;
+$text-bold:600;
+$text-bolder: 700;
+
+//SPACING
+$spacing: 1rem;
+
+
+// BORDER-RADIUS
+$rounded: 0.3rem;
+$rounded-md: 2rem;
+
+//MIXIN
+@mixin Flex($d, $jc, $ai){
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+};
+@mixin Text($fs, $fw, $c){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+};
+@mixin Button($bd, $br, $ol, $bg, $c){
+    border: $bd;
+    border-radius: $br;
+    outline: $ol;
+    background: $bg;
+    color: $c;
+};
+@mixin BgImg($bgimg, $bgp, $bgr, $bgz){
+    background: $bgimg;
+    background-position: $bgp;
+    background-repeat: $bgr;
+    background-size: $bgz;
+};
+
+@mixin Prev-Next($ps, $t, $l, $r, $bg, $w, $h, $br, $fz, $bs){
+    position: $ps;
+    top: $t;
+    left: $l;
+    right: $r;
+    background: $bg;
+    width: $w;
+    height: $h;
+    border-radius: $br;
+    font-size: $fz;
+    box-shadow: $bs;   
+}
+
+@mixin icon-Prev-Next($ps, $bt, $l, $r, $cl, $lh){
+    position: $ps;
+    bottom: $bt;
+    left: $l;
+    right: $r;
+    color: $cl;
+    line-height: $lh;   
+}
